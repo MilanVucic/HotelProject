@@ -36,5 +36,12 @@ public class Main {
         counter += 1;
         counter--;
         System.out.println(counter);
+
+        int aaa = 50;
+        aaa++;
+        System.out.println(aaa);
+        System.out.println(aaa++);
+        System.out.println(aaa);
+        System.out.println(++aaa);
     }
 }
