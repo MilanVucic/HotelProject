@@ -1,14 +1,26 @@
 package lesson_13;
 
-import lesson_13.shapes.Point2D;
-import lesson_13.shapes.Shape;
+import lesson_13.shapes.*;
 
 public class Main {
     public static void main(String[] args) {
-        Point2D p1 = new Point2D(-1, 0);
-        Point2D p2 = new Point2D(4,12);
-        System.out.println(p1.distanceTo(p2));
-        System.out.println(Point2D.distanceBetween(p1, p2));
+        Point2D p1 = new Point2D(0, 0);
+        Point2D p2 = new Point2D(4,4);
+        Point2D p3 = new Point2D(4,0); // 8
+        Point2D p4 = new Point2D(5,-5); // 8
+
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new Circle(20);
+        shapes[1] = new Triangle(p1, p2, p3);
+        shapes[2] = new Rectangle(p1, p4);
+
+        for (int i = 0; i < shapes.length; i++) {
+            System.out.println("-------------------");
+            System.out.println(shapes[i]);
+            System.out.println("Area:" + shapes[i].getArea());
+            System.out.println("Circumference:" + shapes[i].getCircumference());
+            System.out.println("-------------------");
+        }
     }
 
     private static void basicStaticExamples() {

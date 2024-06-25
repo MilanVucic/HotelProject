@@ -21,4 +21,12 @@ public class Point2D {
         double b = p1.y - p2.y;
         return Math.sqrt(a * a + b * b);
     }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
 }

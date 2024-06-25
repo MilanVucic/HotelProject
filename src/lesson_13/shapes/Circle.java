@@ -19,18 +19,17 @@ public class Circle extends Shape {
         this(radius, new Point2D(x, y));
     }
 
-    // Todo: Implement me
+    public static boolean overlap(Circle c1, Circle c2) {
+        return c1.overlaps(c2);
+    }
+
     public boolean completelyContains(Circle other) {
-        return false;
+        return this.center.distanceTo(other.center) + other.radius < this.radius;
     }
 
-    public static boolean intersect(Circle c1, Circle c2) {
-        return c1.intersects(c2);
-    }
-
-    // Todo: Implement me
-    public boolean intersects(Circle other) {
-        return false;
+    public boolean overlaps(Circle other) {
+        double distance = this.center.distanceTo(other.center);
+        return (this.radius + other.radius) >= distance;
     }
 
     @Override
