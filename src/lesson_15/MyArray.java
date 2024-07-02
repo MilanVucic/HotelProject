@@ -1,6 +1,8 @@
 package lesson_15;
 
-public class MyArray<E> {
+import lesson_16.MyList;
+
+public class MyArray<E> implements MyList<E> {
     public static final int INITIAL_SIZE = 10;
     public static final int SIZE_INCREASE = 10;
     private E[] data;
@@ -34,12 +36,28 @@ public class MyArray<E> {
         size++;
     }
 
+    @Override
+    public int size() {
+        return size;
+    }
+
     public E get(int index) {
         return data[index];
     }
 
-    public int getSize() {
-        return size;
+    @Override
+    public void add(E elem, int index) {
+
+    }
+
+    @Override
+    public void remove(int index) {
+
+    }
+
+    @Override
+    public boolean contains(E elem) {
+        return false;
     }
 
     public String toString() {

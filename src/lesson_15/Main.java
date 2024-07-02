@@ -29,10 +29,10 @@ public class Main {
         myArray.add("Milan");
         myArray.add("is");
         myArray.add("our");
-        System.out.println(myArray.getSize());
+        System.out.println(myArray.size());
         myArray.add("teacher");
         myArray.add("and");
-        System.out.println(myArray.getSize());
+        System.out.println(myArray.size());
         System.out.println(myArray.get(0)); // data[0]
         System.out.println(myArray.get(3));
         MyArray<Integer> numbers = new MyArray<>();
