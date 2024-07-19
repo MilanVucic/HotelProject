@@ -8,9 +8,29 @@ public class Main {
 
     /*
         1. Check whether an array is subset of another array.
+        [1,2,3,4] arr1, M
+        [1,2,3,4,5,6,7,8,9] arr2
+        is arr1 subset of arr2? yes
+        O(N^2) -> time complexity
+        O(1) -> space complexity
+
+        Bubble sort => O(N^2)
+        Selection sort => O(N^2)
+        merge sort => O(N logN)
+        SORT and then do stuff
+
+        using a Set we can get time to O(N)
+        Space complexity will be O(N)
+
+        O(N*N) -> O(N logN)
+        10^6 * 10^6 = 10^12
+        10^6 * log2(10^6)= 10^6 * 20ish
+        logx Y = V
+        x^v = Y
+        2^10 = 1024 ~1000
 
         2. Check if a pair of elements exists with given sum in given array.
-        Input: arr[] = {0, -1, 2, -3, 1}, x= -2
+        Input: arr[] = {2, 0, -1, 6, -3, 1, 3}, sum = 5
         Output: Yes
         Explanation:  If we calculate the sum of the output:1 + (-3) = -2
 
