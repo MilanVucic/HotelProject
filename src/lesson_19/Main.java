@@ -31,20 +31,15 @@ public class Main {
 
         MessageStatus messageStatus = MessageStatus.SENT;
 
-        switch (messageStatus) {
-            case NOT_SENT:
-                System.out.println("Message not sent. Try again.");
-                break;
-            case SENT:
-                System.out.println("Message is successfully sent.");
-                break;
-            case DELIVERED:
-                System.out.println("Message delivered.");
-                break;
-            case READ:
-                System.out.println("Message read.");
-                break;
-        }
+        String message = switch (messageStatus) {
+            case NOT_SENT -> {
+                String result = "asdsa.da";
+                yield result;
+            }
+            case SENT -> "Message is successfully sent.";
+            case DELIVERED -> "Message delivered.";
+            case READ -> "Message read.";
+        };
     }
 
     private static void enumExample() {
