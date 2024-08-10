@@ -1,0 +1,7 @@
+Fernando 999
+milan 500
+marco 300
+lucia 250
+unkown 167
+amanda 150
+Luca 150
